@@ -388,7 +388,6 @@ void mipi_novatek_panel_type_detect(struct mipi_panel_info *mipi)
 	return;
 }
 
-static int init = 0;
 
 static int mipi_dsi_set_backlight(struct msm_fb_data_type *mfd)
 {
@@ -510,18 +509,13 @@ static int mipi_novatek_lcd_on(struct platform_device *pdev)
 	if (pinfo->is_3d_panel)
 		support_3d = TRUE;
 
-	if (init == 0) {
+	if (init_pico == 0) {
 		PR_DISP_DEBUG("Display On - 1st time\n");
 
 		if(pdata && pdata->panel_type_detect)
 			pdata->panel_type_detect(&pinfo->mipi);
 
-		htc_mdp_sem_down(current, &mfd->dma->mutex);
-		mipi_dsi_cmds_tx(mfd, &novatek_tx_buf, mipi_power_on_cmd,
-			mipi_power_on_cmd_size);
-		htc_mdp_sem_up(&mfd->dma->mutex);
-
-		init = 1;
+		init_pico = 1;
 
 	} else {
 		PR_DISP_DEBUG("Display On \n");

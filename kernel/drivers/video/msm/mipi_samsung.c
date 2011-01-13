@@ -443,7 +443,6 @@ void mipi_samsung_panel_type_detect(struct mipi_panel_info *mipi)
 	return;
 }
 
-static int init = 0;
 
 static int mipi_samsung_lcd_on(struct platform_device *pdev)
 {
@@ -461,18 +460,13 @@ static int mipi_samsung_lcd_on(struct platform_device *pdev)
 
 	mipi  = &mfd->panel_info.mipi;
 
-	if (init == 0) {
+	if (init_pico == 0) {
 		PR_DISP_INFO("Display On - 1st time\n");
 
 		if(pdata && pdata->panel_type_detect)
 			pdata->panel_type_detect(mipi);
 
-		htc_mdp_sem_down(current, &mfd->dma->mutex);
-		mipi_dsi_cmds_tx(mfd, &samsung_tx_buf, mipi_power_on_cmd,
-			mipi_power_on_cmd_size);
-		htc_mdp_sem_up(&mfd->dma->mutex);
-
-		init = 1;
+		init_pico = 1;
 
 	} else {
 		PR_DISP_INFO("Display On \n");

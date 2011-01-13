@@ -32,7 +32,6 @@ modules.builtin
 *.lzo
 *.patch
 *.gcno
-*zImage
 
 #
 # Top-level generic files
@@ -50,6 +49,7 @@ modules.builtin
 # git files that we don't want to ignore even it they are dot-files
 #
 !.gitignore
+!.mailmap
 
 #
 # Generated include files

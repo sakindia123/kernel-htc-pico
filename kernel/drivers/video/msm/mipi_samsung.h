@@ -18,4 +18,5 @@
 int mipi_samsung_device_register(struct msm_panel_info *pinfo,
 					u32 channel, u32 panel);
 
+extern int init_pico;
 #endif  /* MIPI_SAMSUNG_H */

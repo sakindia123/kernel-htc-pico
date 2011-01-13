@@ -37,7 +37,7 @@
 #include "../../../drivers/video/msm/mdp_hw.h"
 
 extern int panel_type;
-
+int init_pico = 0;
 
 static void pico_panel_power(int on)
 {
@@ -72,7 +72,8 @@ static int mipi_panel_power(int on)
 
 	mipi_power_save_on = flag_on;
 
-	pico_panel_power(on);
+	if (init_pico != 0)
+		pico_panel_power(on);
 
 	return 0;
 }
