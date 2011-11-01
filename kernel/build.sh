@@ -6,7 +6,7 @@ echo " Making config"
 make cranium_defconfig
 
 echo "Making the zImage-the real deal"
-make -j70
+make -j84
 
 echo "Copying output files"
 mv arch/arm/boot/zImage boot.img-zImage
