@@ -1,0 +1,15 @@
+Cranium Kernel For Htc Explorer/Pico A3150e (MSM7227A)
+
+How to build-
+
+*Download arm-eabi-2009q3 from codesourcery.com
+*enter kernel directory
+* set up environment variables in build.sh
+*./build.sh
+
+Ramdisk can be found in boot.img-tools/boot
+Required modules and output boot.img will be found in boot.img-tools/output
+ 
+Then pick your poison-CWM or Fastboot !
+Enjoy :)
+
