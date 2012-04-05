@@ -1,0 +1,14 @@
+show_progress(0.2, 10);
+ui_print(" ");
+ui_print(" ");
+ui_print("Cranium Kernel-oc/uv");
+ui_print(" ");
+ui_print(" ");
+show_progress(0.100000,0);
+ui_print("Flashing...");
+show_progress(0.100000,5);
+assert(package_extract_file("boot.img", "/tmp/boot.img"),
+       write_raw_image("/tmp/boot.img", "boot"),
+       delete("/tmp/boot.img"));
+ui_print("Your Warranty is totally voided,so stfu and reboot");
+
