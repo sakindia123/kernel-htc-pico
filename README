@@ -1,4 +1,8 @@
+=======================================================================================================================
+
 Cranium Kernel For Htc Explorer/Pico A310e (MSM7227A)
+
+=======================================================================================================================
 
 How to build-
 
@@ -8,8 +12,11 @@ How to build-
 *./build.sh
 
 Ramdisk can be found in boot.img-tools/boot
-Required modules and output boot.img will be found in boot.img-tools/output
  
 Then pick your poison-CWM or Fastboot !
+
+- Output is in auto-sign/cranium-kernel.zip.Boot into recovery mode and flash!
+- Fastboot-compatible output is in boot.img-tools/target_img
+
 Enjoy :)
 

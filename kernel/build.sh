@@ -1,5 +1,12 @@
+# Cranium Kernel Compiler.Set correct environment variables before executing!
+
 # Make config
 make cranium_defconfig
+
+# Control kernel version for tracking purposes
+# current_version is our kernel version,it is copied to .version since the compiler reads from .version
+cp current_version .version
+
 # Make zImage
 make -j8
 
@@ -22,11 +29,14 @@ cp target_img/boot.img output
 ./strip.sh
 cd output 
 
-#Make cwm zip and sign
+#Make CWM-flashable zip 
 zip cranium-kernel.zip boot.img META-INF/com/google/android/updater-script META-INF/com/google/android/update-binary system/lib/modules/bcm4330.ko system/lib/modules/kineto_gan.ko
 cp cranium-kernel.zip /home/sarthak/Documents/kernel-htc-pico/auto-sign
 cd ../../
+
+#Sign zip
 cd auto-sign
 java -jar signapk.jar testkey.x509.pem testkey.pk8 cranium-kernel.zip signed_cranium-kernel.zip
 
-
+# Output is in auto-sign/cranium-kernel.zip.Boot into recovery mode and flash!
+# Fastboot-compatible output is in boot.img-tools/target_img
