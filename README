@@ -1,15 +1,18 @@
-=======================================================================================================================
+==================================================================================================================
 
-Cranium Kernel For Htc Explorer/Pico A310e (MSM7227A)
+                           Cranium Kernel For Htc Explorer/Pico A310e (MSM7227A) 
 
-=======================================================================================================================
+                           Sarthak Acharya / sakindia123 @ xda-developers.com
+
+===================================================================================================================
+
 
 How to build-
 
-*Download arm-eabi-2009q3 from codesourcery.com
-*enter kernel directory
-* set up environment variables in build.sh
-*./build.sh
+- Download arm-eabi-2009q3 from codesourcery.com
+- enter kernel directory
+-  set up environment variables in build.sh
+- ./build.sh
 
 Ramdisk can be found in boot.img-tools/boot
  
