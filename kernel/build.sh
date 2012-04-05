@@ -8,7 +8,7 @@ make cranium_defconfig
 cp current_version .version
 
 # Make zImage
-make -j48
+make -j32
 
 # Copy output files
 mv arch/arm/boot/zImage boot.img-zImage
@@ -19,6 +19,7 @@ cp fs/cifs/cifs.ko /home/sarthak/Documents/kernel-htc-pico/boot.img-tools/output
 rm boot.img-zImage
 cd ../
 cd boot.img-tools
+rm target_img/boot.img
 
 # Make boot.img
 tools/mkbootfs boot | gzip > unpack/boot.img-ramdisk-new.gz
