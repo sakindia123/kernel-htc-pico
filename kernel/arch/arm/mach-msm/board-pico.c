@@ -1213,6 +1213,7 @@ static unsigned pico_perf_acpu_table[] = {
        245760000,
        480000000,
        600000000,
+       800000000,
 };
 
 static struct perflock_platform_data holiday_perflock_data = {

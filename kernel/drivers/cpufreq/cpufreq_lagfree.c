@@ -37,7 +37,7 @@
 
 #define DEF_FREQUENCY_UP_THRESHOLD			(50)
 #define DEF_FREQUENCY_DOWN_THRESHOLD		(15)
-#define FREQ_STEP_DOWN 						(160000)
+#define FREQ_STEP_DOWN 						(80000)
 static unsigned int step_down;
 #define FREQ_SLEEP_MAX 						(320000)
 static unsigned int sleep_max;

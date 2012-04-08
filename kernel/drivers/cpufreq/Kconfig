@@ -173,6 +173,18 @@ config CPU_FREQ_DEFAULT_GOV_BRAZILIANWAX
 	help
 	  Use the CPUFreq governor 'brazilianwax as default.
 
+config CPU_FREQ_DEFAULT_GOV_LAZY
+        bool "lazy"
+        select CPU_FREQ_GOV_LAZY
+        help
+          Use the CPUFreq governor 'lazy' as default.
+
+config CPU_FREQ_DEFAULT_GOV_LIONHEART
+  bool "lionheart"
+  select CPU_FREQ_GOV_LIONHEART
+  help
+    Use the CPUFreq governor 'Lionheart' as default.
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE

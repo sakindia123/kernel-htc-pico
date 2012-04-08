@@ -69,7 +69,7 @@ static unsigned long down_rate_us;
  * When ramping up frequency with no idle cycles jump to at least this frequency.
  * Zero disables. Set a very high value to jump to policy max freqeuncy.
  */
-#define DEFAULT_UP_MIN_FREQ 1804800
+#define DEFAULT_UP_MIN_FREQ 800000
 static unsigned int up_min_freq;
 
 /*
@@ -91,13 +91,13 @@ static unsigned int sample_rate_jiffies;
  * Freqeuncy delta when ramping up.
  * zero disables causes to always jump straight to max frequency.
  */
-#define DEFAULT_RAMP_UP_STEP 100000
+#define DEFAULT_RAMP_UP_STEP 80000
 static unsigned int ramp_up_step;
 
 /*
  * Max frequency delta when ramping down. zero disables.
  */
-#define DEFAULT_MAX_RAMP_DOWN 100000
+#define DEFAULT_MAX_RAMP_DOWN 80000
 static unsigned int max_ramp_down;
 
 /*
