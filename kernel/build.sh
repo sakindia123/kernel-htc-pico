@@ -5,12 +5,8 @@ echo " ====================== Cranium Kernel Compiler ==========================
 echo " Making config"
 make cranium_defconfig
 
-# Control kernel version for tracking purposes
-# current_version is our kernel version,it is copied to .version since the compiler reads from .version
-cp current_version .version
-
 echo "Making the zImage-the real deal"
-make -j32
+make -j64
 
 echo "Copying output files"
 mv arch/arm/boot/zImage boot.img-zImage
