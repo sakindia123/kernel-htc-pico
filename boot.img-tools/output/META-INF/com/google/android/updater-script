@@ -7,4 +7,5 @@ assert(package_extract_file("boot.img", "/tmp/boot.img"),
        write_raw_image("/tmp/boot.img", "boot"),
        delete("/tmp/boot.img"));
 show_progress(0.2, 10);
+ui_print("Your Warranty is totally voided,so stfu and reboot");
 unmount("/system");

@@ -1,3 +1,3 @@
 rm .config
-make clean -j8
+make clean -j32
 
