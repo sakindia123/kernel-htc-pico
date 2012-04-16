@@ -38,6 +38,7 @@ cd ../../
 echo "Sign zip"
 cd auto-sign
 java -jar signapk.jar testkey.x509.pem testkey.pk8 cranium-kernel.zip signed_cranium-kernel.zip
+rm cranium-kernel.zip
 
 echo "=================== F.I.N.I.S.H ! ===================="
 
