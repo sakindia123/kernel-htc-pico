@@ -271,7 +271,7 @@ static unsigned int msm7x2xa_sdcc_slot_status(struct device *dev)
 #ifdef CONFIG_MMC_MSM_SDC1_SUPPORT
 static unsigned int pico_sd_slot_type = MMC_TYPE_SD;
 static struct mmc_platform_data sdc1_plat_data = {
-	.ocr_mask	= MMC_VDD_28_29,
+	.ocr_mask	= MMC_VDD_24_25,
 	.translate_vdd  = msm_sdcc_setup_power,
 	.mmc_bus_width  = MMC_CAP_4_BIT_DATA,
 	.slot_type	= &pico_sd_slot_type,
