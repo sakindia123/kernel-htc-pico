@@ -70,3 +70,6 @@ obj-$(CONFIG_IP_NF_ARP_MANGLE) += arpt_mangle.o
 obj-$(CONFIG_IP_NF_ARPFILTER) += arptable_filter.o
 
 obj-$(CONFIG_IP_NF_QUEUE) += ip_queue.o
+
+# gcc 4.6 compiler bug: https://lkml.org/lkml/2011/7/25/344
+ccflags-y += -Wno-address

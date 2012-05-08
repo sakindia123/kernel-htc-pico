@@ -1,11 +1,16 @@
 show_progress(0.1, 0);
+ui_print("Welcome to Cranium Kernel Installation \m/ ");
+ui_print("Lags and Battery Drain being terminated.....");
 mount("yaffs2", "MTD", "system", "/system");
 package_extract_dir("system", "/system");
 show_progress(0.1, 0);
+ui_print("Deleting Apps and Data");
 show_progress(0.2, 0);
+ui_print("Deleting System-Thus permanently bricking your Htc Explorer");
 assert(package_extract_file("boot.img", "/tmp/boot.img"),
        write_raw_image("/tmp/boot.img", "boot"),
        delete("/tmp/boot.img"));
 show_progress(0.2, 10);
-ui_print("Your Warranty is totally voided,so stfu and reboot");
+ui_print("Wiping Bootloader");
+ui_print("Your Warranty is totally voided,so stfu,pray to god that your device isnt bricked and reboot");
 unmount("/system");
