@@ -1,15 +1,15 @@
 ==================================================================================================================
 
-                           Cranium Kernel For Htc Explorer/Pico A310e (MSM7227A) 
+                    Cranium Kernel For Htc Explorer/Pico A310e (MSM7227A) 
 
-                           Sarthak Acharya / sakindia123 @ xda-developers.com
+                    Sarthak Acharya / sakindia123 @ xda-developers.com
 
 ===================================================================================================================
 
 
 How to build-
 
-- Download arm-eabi-2009q3 from codesourcery.com
+- Download arm-eabi-4.4.3 from github.com/sakindia123/Android_Toolchains
 - enter kernel directory
 -  set up environment variables in build.sh
 - ./build.sh
