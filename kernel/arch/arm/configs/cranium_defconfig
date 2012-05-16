@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
-# Linux/arm 2.6.38.6 Kernel Configuration
-# Wed May  9 14:43:07 2012
+# Linux/arm 2.6.38.8 Kernel Configuration
+# Wed May 16 08:58:53 2012
 #
 CONFIG_ARM=y
 CONFIG_SYS_SUPPORTS_APM_EMULATION=y
@@ -35,7 +35,7 @@ CONFIG_BROKEN_ON_SMP=y
 CONFIG_LOCK_KERNEL=y
 CONFIG_INIT_ENV_ARG_LIMIT=32
 CONFIG_CROSS_COMPILE=""
-CONFIG_LOCALVERSION="-cranium-build#3-sakindia123"
+CONFIG_LOCALVERSION="-cranium-build#3-douchebag-sakindia123"
 # CONFIG_LOCALVERSION_AUTO is not set
 CONFIG_HAVE_KERNEL_GZIP=y
 CONFIG_HAVE_KERNEL_LZMA=y
@@ -1017,8 +1017,7 @@ CONFIG_MTD_NAND_IDS=y
 # CONFIG_PARPORT is not set
 CONFIG_BLK_DEV=y
 # CONFIG_BLK_DEV_COW_COMMON is not set
-CONFIG_BLK_DEV_LOOP=y
-# CONFIG_BLK_DEV_CRYPTOLOOP is not set
+# CONFIG_BLK_DEV_LOOP is not set
 
 #
 # DRBD disabled because PROC_FS, INET or CONNECTOR not selected
@@ -1174,19 +1173,8 @@ CONFIG_BCM4330B2=m
 #
 # CAIF transport drivers
 #
-CONFIG_PPP=y
-# CONFIG_PPP_MULTILINK is not set
-# CONFIG_PPP_FILTER is not set
-# CONFIG_PPP_ASYNC is not set
-# CONFIG_PPP_SYNC_TTY is not set
-CONFIG_PPP_DEFLATE=y
-CONFIG_PPP_BSDCOMP=y
-CONFIG_PPP_MPPE=y
-# CONFIG_PPPOE is not set
-CONFIG_PPPOLAC=y
-CONFIG_PPPOPNS=y
+# CONFIG_PPP is not set
 # CONFIG_SLIP is not set
-CONFIG_SLHC=y
 # CONFIG_NETCONSOLE is not set
 CONFIG_MSM_RMNET=y
 # CONFIG_MSM_RMNET_DEBUG is not set
