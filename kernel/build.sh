@@ -20,7 +20,7 @@ cd boot.img-tools
 rm target_img/boot.img
 
 echo " Making boot.img"
-tools/mkbootfs boot | lzma > unpack/boot.img-ramdisk-new.gz
+tools/mkbootfs boot | gzip > unpack/boot.img-ramdisk-new.gz
 mkdir -p target_img
 tools/mkbootimg --kernel unpack/boot.img-zImage --ramdisk unpack/boot.img-ramdisk-new.gz -o target_img/boot.img --base `cat unpack/boot.img-base`	
 cp target_img/boot.img output
