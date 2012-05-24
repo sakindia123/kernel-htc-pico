@@ -360,8 +360,12 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
+                   -fipa-cp-clone -pipe \
+                   -fmodulo-sched -fmodulo-sched-allow-regmoves \
+                   -funswitch-loops -fpredictive-commoning -fgcse-after-reload -fno-tree-vectorize \
+                   -ffast-math -ftree-vectorize \
 		   -fno-delete-null-pointer-checks \
-                   -march=armv7-a \
+                   -marm -march=armv7-a -mfloat-abi=hard -mfpu=vfp3 \
                    -mfpu=neon   
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
